@@ -1,0 +1,522 @@
+/* This stylesheet should apply perfectly well
+ for screen-size <= 560px
+*/
+
+/* All entities are arranged in alphabeitcal order,
+ unless stated otherwise. */
+
+:root {
+	--default-text-size: 16px;
+	--large-icon-dimension: 65px;
+	--large-text-size: 20px;
+	--medium-icon-dimension: 50px;
+	--medium-text-size: 15px;
+	--slarge-text-size: 45px;
+	--small-icon-dimension: 30px;
+	--small-text-size: 13px;
+	--ularge-text-size: 65px;
+	--xlarge-text-size: 25px;
+	--xsmall-text-size: 12px;
+}
+
+/* Tags */
+header span {
+	margin-top: 25px;
+}
+:root {
+	--header-height: 50px;
+}
+header {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--header-height);
+	background-color: var(--twighlight-darkness);
+	padding-bottom: 30px;
+	display: flex;
+	align-items: center;
+	z-index: 5;
+}
+header span {
+	font-size: var(--xlarge-text-size);
+	padding: 5px;
+}
+header span:nth-child(1) {
+	padding-top: -5px;
+	margin-left: 10px;
+}
+main { /* ?? */
+	top: calc(var(--header-height) + 25px);
+	left: 0;
+	width: 100%;
+	/* height: fit-content; */
+	min-height: calc(100% - var(--header-height));
+	background-color: var(--twighlight-darkness);
+	overflow-x: hidden;
+
+	/* overflow-y: auto; */
+}
+/*
+header span:nth-child(1) img {
+	width: var(--small-icon-dimension);
+	height: var(--small-icon-dimension);
+}
+*/
+header span:nth-child(2), header span:nth-child(3), .sl-spn {
+		font-weight: bold;
+}
+header span:nth-child(2), .site-logo .spn-1 {
+	color: white;
+	/* font-family: ; */
+}
+header span:nth-child(2) {
+	margin-left: 10px;
+}
+header span:nth-child(3), .site-logo .spn-2 {
+	color: var(--leaf-yellow);
+	/* font-family: ; */
+}
+i {
+	border: 1px solid darkgrey; /* Temporal */
+}
+main {
+	top: calc(var(--header-height) + 25px);
+	left: 0;
+	width: 100%;
+	/* height: fit-content; */
+	min-height: calc(100% - var(--header-height));
+	background-color: var(--less-bright); /* Keep */
+	overflow-x: hidden;
+	/* overflow-y: auto; */
+}
+main .outer-div {
+	position: absolute;
+	width: 100%;
+	left: 0;
+}
+main .outer-div:nth-child(1) {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 5px;
+}
+:root {
+	--span-width: 33.333333%;
+}
+main .outer-div:nth-child(1) span {
+	position: absolute;
+	width: var(--span-width);
+	height: 100%;
+}
+main .outer-div:nth-child(1) span:nth-child(1) {
+	left: 0;
+	background-color: var(--leaf-green);
+}
+main .outer-div:nth-child(1) span:nth-child(2) {
+	left: var(--span-width);
+	background-color: var(--leaf-yellow);
+}
+main .outer-div:nth-child(1) span:nth-child(3) {
+	left: calc(2 * var(--span-width));
+	background-color: var(--leaf-orange);
+}
+main .outer-div:nth-child(2) {
+	/* Menu */
+	background-color: var(--bright);
+	top: 5px;
+	height: 70px;
+}
+main .slideshow {
+	/* Slideshow */
+	background-color: #000;
+	top: 75px;
+}
+
+
+
+/* Classes */
+.contact-info-holder {
+	margin-left: 20px;
+}
+.contact-info a span p {
+	font-size: var(--small-text-size);
+}
+.contact-info a span p:nth-child(1) {
+	margin-bottom: 0px;
+	font-size: var(--xsmall-text-size);
+	color: lightgray;
+}
+.contact-info a span p:nth-child(2) {
+	margin-top: 2px;
+}
+.gold-field-text {
+	font-size: var(--large-text-size);
+}
+:root {
+	/* Arranged in the order they appear in html. */
+	--slide-show-height: 650px; /* Keep */
+	--showcase-div-top:  1400px; /* Keep */
+	--showcase-div-height: 850px; /* Keep */
+	--prod-serv-div-height: 650px; /* Keep */
+}
+.innovation-card-holder {
+	position: absolute;
+	top: var(--slide-show-height); /* Keep */
+	left: 0;
+	width: 100%;
+	height: fit-content;
+	border-color: transparent; /* Temporal */
+	z-index: 1;
+}
+:root {
+	--innovation-card-height: 200px;
+}
+.innovation-card { /* Keep */
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 90%;
+	height: var(--innovation-card-height); 
+	border-radius: 20px;
+}
+.innovation-card:nth-child(2) {
+	top: calc(var(--innovation-card-height) * 1 + 75px * 1);
+}
+.innovation-card:nth-child(3) {
+	top: calc(var(--innovation-card-height) * 2 + 75px * 2);
+}
+.large-icon {
+	width: var(--large-icon-dimension);
+	height: var(--large-icon-dimension);
+}
+.left-right-center-content {
+	display: flex;
+	justify-content: center;
+}
+.left-right-centered {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.medium-icon {
+	width: var(--medium-icon-dimension);
+	height: var(--medium-icon-dimension);
+}
+.menu {
+	justify-content: space-evenly;
+	height: 80px;
+}
+.menu span * {
+	color: var(--bright);
+	background-color: var(--bright);
+}
+.menu span a {
+	font-size: var(--medium-text-size);
+}
+.outer-div h3 {
+	color: var(--leaf-orange);
+}
+.products-div *, .services-div * {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+.products-div h3, .services-div h3 {
+	font-size: var(--large-text-size);
+}
+.products-div p, .services-div p {
+	top: 50px;
+	color: var(--leaf-yellow);
+	font-size: var(--xlarge-text-size);
+	margin-top: 0;
+}
+.products-div table, .services-div table {
+	width: 100%;
+}
+.products-div table tr, .services-div table tr {
+	left: 10px;
+	transform: translateX(-13%);
+	margin-left: 0px;
+}
+:root {
+	--table-col-width: 300px;
+	--table-col-height: 350px;
+}
+.table-colmn {
+	position: static;
+	margin-left: 30px;
+	margin-right: 30px;
+	width: var(--table-col-width);
+	height: var(--table-col-height);
+	border-radius: var(--col-border-radius);
+	background-image: url('images/farm_image.jpg');
+	background-size: cover;
+	background-origin: content-box;
+}
+
+/* Specially positioned here */
+:root {
+	--col-border-radius: 10%;
+	--col-width: 200px;
+	--col-from-edge: 50px;
+}
+
+.table-colmn span {
+	position: absolute;
+	border-radius: var(--col-border-radius);
+}
+.col-top-box {
+	bottom: 20px;
+	width: calc(var(--table-col-width) / 3.5);
+	height: 70px;
+	background-color: var(--leaf-orange);
+	z-index: 2;
+}
+.col-top-box img {
+	width: 60%;
+	height: 60%;
+}
+.col-bottom-box {
+	bottom: -45px;
+	width: calc(var(--table-col-width) / 2);
+	height: 100px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+.products-div table .col-top-box {
+	background-color: var(--leaf-green);
+}
+.products-div table .col-bottom-box {
+	background-color: var(--pale-green);
+}
+.services-div table .col-top-box {
+	background-color: var(--leaf-orange);
+}
+.services-div table .col-bottom-box {
+	background-color: var(--pale-orange);
+}
+.col-bottom-box h3 {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+}
+.products-div table .col-bottom-box h3 {
+	color: var(--leaf-green);
+}
+.services-div table .col-bottom-box h3 {
+	color: var(--leaf-orange);
+}
+.row-display {
+	display: flex;
+}
+.showcase-div {
+	top: var(--showcase-div-top); /* Right below slideshow */
+	height: var(--showcase-div-height);
+	background-color: var(--less-bright);
+}
+
+.showcase-div img, .showcase-div span {
+	position: absolute;
+}
+.showcase-div img {
+	border-radius: 75%;
+}
+:root {
+	--large-img-dimension: 300px; /* Keep */
+	--small-img-dimension: calc(var(--large-img-dimension) * .45);
+}
+.showcase-div img:nth-child(1) {
+	top: 150px;
+	left: 50px;
+	width: var(--large-img-dimension);
+	height: var(--large-img-dimension);
+}
+.showcase-div img:nth-child(2) {
+	top: var(--large-img-dimension); /* Keep */
+	left: 5px;
+	border: 15px solid var(--less-bright);
+	z-index: 1; /* Overlays it on top of the bigger img */
+	width: var(--small-img-dimension);
+	height: var(--small-img-dimension);
+}
+.showcase-div span {
+	top: calc(var(--large-img-dimension) + 160px); /* Same as large img */
+	left: 10px;
+}
+.showcase-div span h6 {
+	color: var(--leaf-orange);
+	font-size: var(--large-text-size);
+}
+.showcase-div span h3 {
+	color: var(--twighlight-darkness);
+	font-size: var(--xlarge-text-size);
+	margin-top: -10px;
+}
+.showcase-div span p {
+	color: var(--large-text-size);
+}
+.slideshow {
+	overflow-y: hidden; /* Keep */
+}
+.slideshow p, .slideshow h2 { /* Keep */
+	position: absolute;
+	left: 20px;
+	max-width: calc(100% - 40px);
+}
+.slideshow p { /* Keep */
+	top: 100px;
+	font-size: 30px;
+}
+.slideshow h2 { /* Keep */
+	margin-top: 100px;
+	font-size: var(--slarge-text-size);
+}
+.slideshow .container .slideImage {
+  	width: 250%;
+  	margin-left: -75%;
+}
+.slideshow button {
+	position: absolute;
+	top: 10px;
+	width: 65px;
+	height: 65px;
+	font-size: 40px;
+	padding-bottom: 35px;
+	border-color: transparent;
+}
+#prevBtn {
+	top: 10px;
+	left: 15px;
+}
+#nextBtn {
+	right: 20px;
+}
+
+.slideshow
+.welcome-btn,
+.slideshow
+.welcome-text {
+	/*
+	color: var(--leaf-yellow);
+	text-shadow: 1.5px 1.5px var(--twighlight-fog);
+	*/
+}
+
+.showcase-div img:nth-child(1) {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.showcase-div img:nth-child(2) {
+	border: 10px solid var(--less-bright);
+}
+.small-icon {
+	width: var(--small-icon-dimension);
+	height: var(--small-icon-dimension);
+}
+.social-media-icon-holder {
+	display: flex;
+}
+.header .social-media-icon-holder {
+	display: flex;
+	justify-content: space-evenly;
+	margin-left: 180px;
+}
+.social-media-icon {
+	border-radius: 50%;	
+	background-color: lightgray;
+}
+.social-media-icon:nth-child(3) {
+	margin-left: 10px;
+}
+.social-media-icon a img {
+	width: 15px;	
+	height: 15px;
+}
+.up-down-center-content {
+	display: flex;
+	align-items: center;
+}
+.vertical-separator-line {
+	height: 50px;
+	rotate: 0deg;
+	background-color: var(--twighlight-fog);
+	border-color: transparent; /* Temporal */
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Specially positioned */
+.footer {
+	top: var(--footer-top); /* Right below products-div */
+	height: 1000px;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: var(--twighlight-darkness);
+}
+.footer * {
+	color: var(--default-gray);
+}
+.footer .bg { /* Keep */
+	z-index: -1;
+	opacity: 0;
+}
+.footer .outer-span {
+	position: absolute;
+	left: 25px;
+	max-width: calc(100% - 20px);
+	height: fit-content;
+	margin-left: 0px;
+	margin-right: 0px;
+	justify-content: start;
+}
+.os-1 {
+	top: 50px;
+}
+.os-2 {
+	top: 400px;
+}
+.os-3 {
+	top: 450px;
+}
+.site-logo span {
+	font-size: var(--xlarge-text-size);
+	margin-left: 15px;
+}
+.footer tr:first-of-type {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.footer .outer-span {
+	z-index: 1;
+	max-width: calc(100% - 10px);
+	height: fit-content;
+	margin-left: 5px;
+	margin-right: 25px;
+	justify-content: start;
+}
+.footer table h2 {
+	max-width: 85%;
+}
+.footer .social-media-icon {
+	background-color: rgba(0, 0, 0, .2);
+	width: 40px;
+	height: 40px;
+	margin-right: 25px;
+}
+.footer .social-media-name {
+	margin-top: 10px;
+}
+.footer-cont-span {
+	margin-left:  20px;
+}
+.footer-cont-img {
+	width: 30px;
+	height: 30px;
+}
+.footer .copyright-info {
+	position: absolute;
+	bottom: 25px;
+	left: 10%;
+}

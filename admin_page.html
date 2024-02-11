@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Whatever has an id will be changed by js -->
+
+	<meta charset="UTF-8">
+    <meta name="author" content="Francis Kalunga">
+    <meta name="description" content="...">
+    <meta name="keywords" content="csv...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>Admin Page</title>
+
+	<!--CSS file for common styles-->
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" media="screen and (max-width: 560px)" href="small_screens_styles.css" type="text/css">
+
+	<!--CSS file for uique styles-->
+	<link rel="stylesheet" href="admin_page.css" type="text/css">
+	<!--JS file for initialization-->
+	<!--
+		In essence, the initialization js file loads all the commom
+		elements of the various pages of the site.
+	-->
+	<script type="text/javascript" src="common.js"></script>
+</head>
+
+<body>
+	<header class="header"> <!--Redundacy for semantic formatting reasons-->
+		<span class="clickable" id="site-log-item-1">
+			<!-- site-icon -->
+			<img src="icons/image.png" class="large-icon" />
+		</span>
+		<span class="clickable" id="site-log-item-2">GoldField</span>
+		<span class="clickable" id="site-log-item-3">Zambia</span>
+
+		<span class="social-media-icon-holder">
+			<!-- Social Media Icons -->
+			<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+				<a href="#"><img src="icons/facebook-icon.png" class="small-icon" /></a>
+			</span>
+			<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+				<a href="#"><img src="icons/whatsapp-icon.png" class="small-icon" /></a>
+			</span>
+			<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+				<a href="#"><img src="icons/image.png" class="small-icon" /></a>
+			</span>
+		</span>
+		<span class="contact-info-holder row-display">
+			<!-- Contact Info -->
+			<span class="contact-info">
+				<a href="#" class="up-down-center-content row-display">
+					<img src="icons/call-icon.png" class="medium-icon" />
+					<span>
+						<p>Call anytime</p>
+						<p>+260 (000)-00...</p>
+					</span>
+				</a>
+			</span>
+			<hr class="vertical-separator-line" />
+			<span class="contact-info">
+				<a href="#" class="up-down-center-content row-display">
+					<img src="icons/email-icon.png" class="medium-icon" />
+					<span>
+						<p>Email us</p>
+						<p>email@us.zm</p>
+					</span>
+				</a>
+			</span>
+			<hr class="vertical-separator-line" />
+			<span class="contact-info">
+				<a href="#" class="up-down-center-content row-display">
+					<img src="icons/location-icon.png" class="medium-icon" />
+					<span>
+						<p>4056/C, Kab..</p>
+						<p>Lusaka Zam...</p>
+					</span>
+				</a>
+			</span>
+		</span>
+	</header>
+	
+		<div name="cover" class="cover"></div>
+		<div class="colored-line outer-div">
+			<!-- Don't remove: Under investigation-->
+			<span></span> <span></span> <span></span>
+		</div>
+
+		<div class="left-right-center-content div-switcher">
+			<div class="upload-form-div">
+				<h1>Upload a Video</h1>
+
+				<form action="/upload" method="post" enctype="multipart/form-data" name="upload_form">
+					<div class="left-right-center-content">
+						<label>
+							Select video:
+							<input type="file" name="video" accept=".mp4,.mov,.avi,.wmv,.avchd,.flv,.mkv,.webm" multiple="false" required/>
+						</label>
+
+						<label>
+							Select thumbnail:
+							<input type="file" name="thumbnail" accept="image/jpeg,image/png,image/gif,image/svg+xml"	multiple="false" required/>
+						</label>
+					</div>
+
+					<label>
+						Enter title:
+						<input type="text" name="title" placeholder="Video Title" required />
+					</label>
+
+					<label>
+						Enter a brief summary:
+						<textarea name="summary" placeholder="Video Summary"></textarea>
+					</label>
+					
+					<button type="submit">Upload</button>
+				</form>
+			</div>
+
+			<div class="videos-div">
+				<ul id="video_list" class="video-list">
+					<!--
+					<li class="left-right-center-content space-items-around video-item">
+						<span name="cover" class="video-cover"></span>
+						<span>
+							<img src="./images/video_thumbnail.jpeg">
+						</span>
+						<span>
+							<h3>test 1</h3>
+							<p>Not much to say here</p>
+						</span>
+					</li>
+					<li class="left-right-center-content space-items-around video-item">
+						<span name="cover" class="video-cover"></span>
+						<span>
+							<img src="./images/video_thumbnail.jpeg">
+						</span>
+						<span>
+							<h3>test 1</h3>
+							<p>Not much to say here</p>
+						</span>
+					</li>
+					-->
+					<!--
+						TODO: create JS function for fetching video entities and displaying them here.
+					-->
+
+				</ul>
+			</div>
+	</div>
+	<footer class="left-right-center-content footer">
+			<span class="outer-span os-1">
+				<table>
+					<tr>
+						<td class="up-down-center-content site-logo">
+							<!-- site-icon -->
+							<img src="icons/image.png" class="large-icon" />
+							<span class="sl-spn spn-1">GoldField</span>
+							<span class="sl-spn spn-2">Zambia</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>
+								Just an ordinary paragraph containing a simple summary about ourselves.
+							</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="social-media-icon-holder">
+								<!-- Social Media Icon -->
+								<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+									<a href="#"><img src="icons/facebook-icon.png" class="small-icon" /></a>
+								</span>
+								<span class="social-media-name">
+									Facebook
+								</span>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="social-media-icon-holder">
+								<!-- Social Media Icon -->
+								<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+									<a href="#"><img src="icons/whatsapp-icon.png" class="small-icon" /></a>
+								</span>
+								<span class="social-media-name">
+									WhatsApp
+								</span>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="social-media-icon-holder">
+								<!-- Social Media Icon -->
+								<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+									<a href="#"><img src="icons/image.png" class="small-icon" /></a>
+								</span>
+								<span class="social-media-name">
+									 Social Media Name
+								</span>
+							</span>
+						</td>
+					</tr>
+				</table>
+			</span>
+
+			<span class="outer-span os-2">
+				<table>
+					<tr>
+						<td>
+							<h1>
+								News
+							</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+					</tr>
+				</table>
+			</span>
+
+			<span class="outer-span os-3">
+				<table>
+					<tr>
+						<td>
+							<h1>
+								Contact
+							</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" class="up-down-center-content row-display">
+								<img src="icons/call-icon.png" class="medium-icon footer-cont-img" />
+								<span class="footer-cont-span">
+									<p>Call anytime</p>
+									<p>+260 (000)-00...</p>
+								</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" class="up-down-center-content row-display">
+								<img src="icons/email-icon.png" class="medium-icon footer-cont-img" />
+								<span class="footer-cont-span">
+									<p>Email us</p>
+									<p>email@us.zm</p>
+								</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#" class="up-down-center-content row-display">
+								<img src="icons/location-icon.png" class="medium-icon footer-cont-img" />
+								<span class="footer-cont-span">
+									<p>4056/C, Kab..</p>
+									<p>Lusaka Zam...</p>
+								</span>
+							</a>
+						</td>
+					</tr>
+				</table>
+			</span>
+	</footer>
+	<!--The script file referenced by the  tags below will be for generic behaviour.
+	-->
+	<script type="text/javascript" src="admin_page.js"></script>
+
+  <script type="module">
+		/*
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+		import { getStorage, ref, uploadBytesResumable, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-storage.js";
+    import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBFVeOSG9vV2FKRrfBJJtRsQwVrZ5W0QRc",
+      authDomain: "gold-field-site.firebaseapp.com",
+      projectId: "gold-field-site",
+      storageBucket: "gold-field-site.appspot.com",
+      messagingSenderId: "722515055278",
+      appId: "1:722515055278:web:62eeed4c98a2254071133f",
+      measurementId: "G-N4DPJMBK2Q"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // Get a reference to the storage service
+		const storage = getStorage(app, "gs://gold-field-site.appspot.com");
+
+		// Initialize Cloud Firestore and get a reference to the service
+		const db = getFirestore(app);
+
+		const form = document.querySelector('form');	
+
+		// const fileInput = document.querySelector('input[type="file"]');
+
+		form.addEventListener('submit', (event) => {
+			event.preventDefault();
+
+			const title = form.title.value;
+			const summary = form.summary.value;
+			
+			// Create a storage reference for a video
+			const storageRef = ref(storage, `videos/${title}`);
+
+			// Create a storage reference for a thumbnail
+			const thumbnailStorageRef = ref(storage, `thumbnails/${title}`);
+
+			const video = form.video.files[0];
+			const thumbnail = form.thumbnail.files[0];
+
+			const uploadVideo = uploadBytesResumable(storageRef, video);
+
+			// First we upload the video and get its download URL, then upload the thumbnail, title and details.
+			// Each details document in firestore will contain its document id in its fields.
+
+			// Listen for state changes, errors, and completion of the upload.
+			uploadVideo.on('state_changed',
+				(snapshot) => {
+					// Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+					const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+					console.log('Upload is ' + progress + '% done');
+					switch (snapshot.state) {
+						case 'paused':
+							console.log('Upload is paused');
+							break;
+						case 'running':
+							console.log('Upload is running');
+							break;
+					}
+				}, 
+				(error) => {
+					// A full list of error codes is available at
+					// https://firebase.google.com/docs/storage/web/handle-errors
+					switch (error.code) {
+						case 'storage/unauthorized':
+							// User doesn't have permission to access the object
+							break;
+						case 'storage/canceled':
+							// User canceled the upload
+							break;
+
+						// ...
+
+						case 'storage/unknown':
+							// Unknown error occurred, inspect error.serverResponse
+							break;
+					}
+				}, 
+				() => {
+					// Upload completed successfully, now we can get the download URL
+					// and upload the details to firestore
+					getDownloadURL(uploadVideo.snapshot.ref).then(async (downloadURL) => {
+						const thumbnailUrl = await uploadBytes(thumbnailStorageRef, thumbnail)
+							.then((snapshot) => {
+								return getDownloadURL(snapshot.ref)
+							})
+							.then((result) => {
+								//return result;
+								return Promise.resolve(result);
+							})
+							.then((result) => {
+								return result;
+							});
+						try {
+							const docRef = await addDoc(collection(db, "video_details"), {
+								title: title,
+								summary: summary,
+								downloadUrl: downloadURL,
+								thumbnailUrl: thumbnailUrl
+							});
+							console.log("Document written with ID: ", docRef.id);
+							alert('Upload successful!')
+						} catch (e) {
+							console.error("Error adding document: ", e);
+						}
+					});
+				}
+			);
+		});
+		*/
+		
+  </script>
+
+	<script type="text/javascript" src="init_vids.js"></script>
+	<script type="text/javascript">
+		let vid_elems = []
+
+		async function init_vid_elems() {
+			/*
+			const querySnapshot = await getDocs(collection(db, "video_details"));
+			querySnapshot.forEach((doc) => {
+				// doc.data() is never undefined for query doc snapshots
+				console.log(doc.id, " => ", doc.data());
+
+
+			});
+			*/
+
+			for (let i = 0; i < 10; i++) {
+				// First we create the JS element, then we associate it with the HTML element.
+				vid_elems.push(new Vid(`v-${i}`))
+			}
+
+			vid_elems.forEach((vid_elem) => {
+				populate('video_list', 'add', `
+					<li id="${vid_elem.id}" class="left-right-center-content space-items-around video-item" >
+						<span id="${vid_elem.id}-cover" class="video-cover"></span>
+						<span>
+							<img src="${default_video_thumbnail_path}">
+						</span>
+						<span>
+							<h3>test 1</h3>
+							<p>Not much to say here</p>
+						</span>
+					</li>
+				`);
+			})
+
+			vid_elems.forEach((vid_elem) => {
+				vid_elem.init
+			})
+		}
+
+		init_vid_elems()
+		
+	</script>
+</body>
+</html>

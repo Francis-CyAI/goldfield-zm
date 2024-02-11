@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Whatever has an id will be changed by js -->
+
+	<meta charset="UTF-8">
+    <meta name="author" content="Francis Kalunga">
+    <meta name="description" content="...">
+    <meta name="keywords" content="csv...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<title id="title"></title>
+
+	<!--CSS file for common styles-->
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" media="screen and (max-width: 560px)" href="small_screens_styles.css" type="text/css">
+
+	<!--CSS file for uique styles-->
+	<link rel="stylesheet" href="offering.css" type="text/css">
+	<!--JS file for initialization-->
+	<!--
+		In essence, the initialization js file loads all the commom
+		elements of the various pages of the site.
+	-->
+	<script type="text/javascript" src="common.js"></script>
+</head>
+
+<body>
+	<header class="header"> <!--Redundacy for semantic formatting reasons-->
+			<span class="clickable" id="site-log-item-1">
+				<!-- site-icon -->
+				<img src="images/GoldField-logo.jpg" class="large-icon site-logo" />
+			</span>
+			<span class="clickable" id="site-log-item-2">GoldField</span>
+			<span class="clickable" id="site-log-item-3">Zambia</span>
+		<span class="social-media-icon-holder">
+			<!-- Social Media Icons -->
+			<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+				<a href="#" id="facebook-link"><img src="icons/facebook-icon.png" class="small-icon" /></a>
+			</span>
+			<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+				<a href="#" id="whatsapp-link"><img src="icons/whatsapp-icon.png" class="small-icon" /></a>
+			</span>
+			<!--
+			<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+				<a href="#"><img src="icons/image.png" class="small-icon" /></a>
+			</span>
+			-->
+		</span>
+		<span class="contact-info-holder row-display">
+			<!-- Contact Info -->
+			<span class="contact-info">
+				<a id="tel-link" href="#" class="up-down-center-content row-display">
+					<img src="icons/call-icon.png" class="medium-icon" />
+					<span>
+						<p>Call anytime</p>
+						<p>+260 9-723..</p>
+					</span>
+				</a>
+			</span>
+			<hr class="vertical-separator-line" />
+			<span class="contact-info">
+				<a id="email-link" href="#" class="up-down-center-content row-display">
+					<img src="icons/email-icon.png" class="medium-icon" />
+					<span>
+						<p>Email us</p>
+						<p>email@us.zm</p>
+					</span>
+				</a>
+			</span>
+			<hr class="vertical-separator-line" />
+			<span class="contact-info">
+				<a id="location-link" href="#" class="up-down-center-content row-display">
+					<img src="icons/location-icon.png" class="medium-icon" />
+					<span>
+						<p>Lusaka,</p>
+						<p>Zambia</p>
+					</span>
+				</a>
+			</span>
+		</span>
+	</header>
+	
+		<div class="colored-line outer-div">
+			<!-- Don't remove: Under investigation-->
+			<span></span> <span></span> <span></span>
+		</div>
+		
+		<div class="clickable offering-article" id="offeringArticle">
+			<div class="title-holder"><h1 id="articleTitle"></h1></div>
+			<div class="img-holder">
+				<img id="articleImg" src="" />
+			</div>
+		</div>
+		<div class="outer-div tile-grid  services-grid">
+			<div class="tile-holder">
+				<span class="clickable tile s-tile-1" id="fishFarming">
+					<!--Fish Farming-->
+					<h1>Fish Farming</h1>
+				</span>
+				<span class="clickable tile s-tile-2" id="nurseryPM">
+					<!--Nursery Plant Management-->
+					<h1>Nursery Plant Management</h1>
+				</span>
+			</div>
+			<div class="tile-holder">
+				<!--Poultry Rearing-->
+				<span class="clickable tile s-tile-3" id="poultryR">
+					<h1>Poultry Rearing</h1>
+				</span>
+				<span class="clickable tile s-tile-4" id="agricT">
+					<!--Agricultural Training and consultations-->
+					<h1>Agricultural Training and consultations</h1>
+				</span>	
+			</div><div class="tile-holder">
+				<!--Vegetable Cultivation-->
+				<span class="clickable tile s-tile-5" id="vegeCult">
+					<h1>Vegetable Cultivation</h1>
+				</span>	
+			</div>
+
+		</div>
+		<div class="outer-div tile-grid products-grid">
+			<div class="tile-holder">
+				<!--Cooking Oil and Animal Feed-->
+				<span class="clickable tile p-tile-1" id="cookingOil">
+					<h1>Cooking Oil and Animal Feed</h1>
+				</span>
+				<span class="clickable tile p-tile-2" id="porkProducts">
+					<!--Pig Breeding and Pork Products-->
+					<h1>Pig Breeding and Pork Products</h1>
+				</span>
+			</div>
+			<div class="tile-holder">
+				<!--Fruit Plantations-->
+				<span class="clickable tile p-tile-3" id="fruits">
+					<h1>Fruit Plantations</h1>
+				</span>
+				<span class="clickable tile p-tile-4" id="compostManure">
+					<!--Liquid fertilizer and Compost Manure Products-->
+					<h1>Liquid fertilizer and Compost Manure Products</h1>
+				</span>	
+			</div>		
+		</div>
+	<footer class="left-right-center-content footer">
+			<span class="outer-span os-1">
+				<table>
+					<tr>
+						<td class="up-down-center-content site-logo">
+							<!-- site-icon -->
+							<img src="images/GoldField-logo.jpg" class="large-icon site-logo" />
+							<span class="sl-spn spn-1">GoldField</span>
+							<span class="sl-spn spn-2">Zambia</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>
+								"Easy does it."
+							</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="social-media-icon-holder">
+								<!-- Social Media Icon -->
+								<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+									<a id="facebook-link-2" href="#"><img src="icons/facebook-icon.png" class="small-icon" /></a>
+								</span>
+								<span class="social-media-name">
+									Facebook
+								</span>
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="social-media-icon-holder">
+								<!-- Social Media Icon -->
+								<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+									<a id="whatsapp-link-2" href="#"><img src="icons/whatsapp-icon.png" class="small-icon" /></a>
+								</span>
+								<span class="social-media-name">
+									WhatsApp
+								</span>
+							</span>
+						</td>
+					</tr>
+					<!--
+					<tr>
+						<td>
+							<span class="social-media-icon-holder">
+								<!-/- Social Media Icon -/->
+								<span class="social-media-icon small-icon up-down-center-content left-right-center-content">
+									<a href="#"><img src="icons/image.png" class="small-icon" /></a>
+								</span>
+								<span class="social-media-name">
+									 Social Media Name
+								</span>
+							</span>
+						</td>
+					</tr>
+					-->
+				</table>
+			</span>
+
+			<span class="outer-span os-2">
+				<table>
+					<tr>
+						<td>
+							<p>
+								Icons by various artists from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+					</tr>
+				</table>
+			</span>
+
+			<span class="outer-span os-3">
+				<table>
+					<tr>
+						<td>
+							<h1>
+								Contact
+							</h1>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="tel-link-2" href="#" class="up-down-center-content row-display">
+								<img src="icons/call-icon.png" class="medium-icon footer-cont-img" />
+								<span class="footer-cont-span">
+									<p>Call anytime</p>
+									<p>+260 9-723...</p>
+								</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="email-link-2" href="#" class="up-down-center-content row-display">
+								<img src="icons/email-icon.png" class="medium-icon footer-cont-img" />
+								<span class="footer-cont-span">
+									<p>Email us</p>
+									<p>Goldfield...</p>
+								</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="location-link-2" href="#" class="up-down-center-content row-display">
+								<img src="icons/location-icon.png" class="medium-icon footer-cont-img" />
+								<span class="footer-cont-span">
+									<p>Lusaka,</p>
+									<p>Zambia</p>
+								</span>
+							</a>
+						</td>
+					</tr>
+				</table>
+				<p class="copyright-info">
+					&copy; Copyright GoldField Zambia, 2023.
+				</p>
+			</span>
+	</footer>
+	<script src="info_init.js" type="text/javascript"></script>
+	<!--The script file referenced by the  tags below will be for generic behaviour.
+	-->
+	<script type="text/javascript" src="offerings.js"></script>
+	<script type="text/javascript" src="article_selector.js"></script>
+</body>
+</html>

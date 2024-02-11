@@ -1,0 +1,228 @@
+:root {
+    
+}
+body {
+    background-color: var(--less-bright);
+}
+header {
+    position: absolute;
+}
+footer {
+    background-color: var(--twighlight-darkness);
+    margin-left: -10px;
+    width: calc(100% + 16px);
+    margin-bottom: -10px;
+    margin-top: 25px;
+}
+.footer .copyright-info {
+	position: static;
+    padding-top: 100px;
+}
+.offering-footer {
+    background-color: var(--twighlight-darkness);
+}
+.offering-article-holder {
+    position: absolute; 
+    top: calc(var(--tile-height) * 2 + 150px);
+    width: 100%;
+    height: fit-content;
+
+}
+.offering-article {
+    transform: translateX(35%);
+    width: 60%;
+    min-height: 500px;
+    background-color: var(--bright);
+    border-radius: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top:  150px;
+    margin-bottom: 100px;
+}
+.offering-article .title-holder {
+    position: absolute;
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 75px;
+    background-color: rgba(0, 0, 0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offering-article .title-holder h1 {
+    color: var(--bright);
+    font-size: var(--xlarge-text-size);
+}
+.offering-article .img-holder {
+    position: absolute;
+    top: -2px;
+    left: -2%;
+    width: 104%;
+    height: 450px;
+    z-index: -1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.offering-article img {
+    margin-top: -10%;
+    width: 100%;
+    height: 130%;
+}
+.offering-article p {
+    padding-top: -10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: var(--large-text-size);
+    color: var(--twighlight-darkness);
+}
+.contents:first-of-type {
+    margin-top: 500px;
+}
+.tile-grid {
+    margin-top: 100px;
+    margin-left: 10%;
+	width: 80%;
+}
+.products-grid {
+    height: calc(var(--tile-height) * 2 + var(--tile-height) / 4);
+}
+.services-grid {
+    /* This is so that all tiles fit in the tile-grid */
+    height: calc(var(--tile-height) * 3 + var(--tile-height) / 4);
+}
+.tile-holder {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.tile-holder:nth-child(1) {
+	top: 0;
+}
+.tile-holder:nth-child(1) {
+	top: 50%;
+}
+.tile {
+	width: var(--tile-width);
+	height: var(--tile-height);
+	border-radius: 15px;
+	background-color: var(--bright);
+	margin-top: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.tile:hover {
+	width: calc(var(--tile-width) + 20px);
+	height: calc(var(--tile-height) + 10px);
+}
+.tile h1 {
+    background-color: rgba(0, 0, 0,.5);
+    text-align: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+    color: var(--bright);
+    font-size: 200%;
+}
+.p-tile-1 {
+    background-image: url("images/cooking_oil.jpg");
+}
+.p-tile-2 {
+    background-image: url("images/piggery.jpg");
+}
+.p-tile-3 {
+    background-image: url("images/banana_plantation.jpg");
+}
+.p-tile-4 {
+    background-image: url("images/compost_manure.jpg");
+}
+.s-tile-1 {
+    background-image: url("images/fish_farming.jpg");
+}
+.s-tile-2 {
+    background-image: url("images/nursery_plant_management.jpg");
+}
+.s-tile-3 {
+    background-image: url("images/poultry.jpg");
+}
+.s-tile-4 {
+    background-image: url("images/agricultural_training.jpg");
+}
+.s-tile-5 {
+    background-image: url("images/vegetable_cultivation.jpg");
+}
+
+
+
+@media screen and (max-width: 760px) {
+
+    header {
+       overflow-x: hidden;
+    }
+    header .social-media-icon-holder *, header .contact-info-holder * {
+        position: absolute;
+        width: 0;
+        height: 0;
+        color: transparent;
+        background-color: transparent;
+        z-index: -1;
+    }
+    .header span {
+        font-size: var(--large-text-size);
+    }
+    .footer p {
+        width: 1000%
+    }
+    .offering-article {
+        transform: translateX(0%);
+        width: 100%;
+    }
+    .offering-article img {
+        margin-top: -10%;
+        margin-left: -20%;
+        width: 140%;
+        height: 100%;
+    }
+    .offering-article .title-holder h1 {
+        width: fit-content; 
+        margin: 0 auto;
+        font-size: var(--large-text-size);
+
+    }
+    .footer .outer-span {
+        position: static;
+        width: 100%;
+    }
+    .footer .outer-span tr {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+    .os-1 {
+       transform: translate(50%, -130%);
+    }
+    .os-2 {
+        transform: translate(50%, 0%);
+    }
+    .os-3 {
+        transform: translate(-180%, 10%);
+    }
+    :root {
+        --tile-width: 48%;
+        --tile-height: 200px;
+    }
+    .tile-grid {
+        margin-top: 100px;
+        margin-left: 0%;
+        width: 100%;
+    }
+    .tile-holder {
+        width: 100%;
+        display: flex;
+        justify-content:space-between;
+    }
+    .tile h1 {
+        padding: 5px;
+        font-size: var(--large-text-size);
+    }
+}
